@@ -17,19 +17,19 @@ func _process(delta):
 	var horizontalAxe=Input.get_axis(right,left)
 	var orientationChanged: bool=false
 	var newVelocity = get_linear_velocity()
-	print_debug(horizontalAxe)
-	print_debug(verticalAxe)
+	#print_debug(horizontalAxe)
+	#print_debug(verticalAxe)
+	#print_debug(linear_velocity)
+	#print_debug(self.global_position)
 	var direction=Vector3(horizontalAxe,0,verticalAxe).normalized()
 	linear_velocity+=moveSpeed*direction*delta
-	if linear_velocity.length() >5:
-		look_at(global_transform.origin - linear_velocity, Vector3.UP)
-		orientationChanged=true
-	else :
-		orientationChanged=false
+	if verticalAxe==0 and horizontalAxe==0 :
+		linear_velocity=linear_velocity*0.95
+	
 		
-	if orientationChanged  :
-		#linear_velocity=newVelocity+externalimpulse
-		pass
+	#if orientationChanged  :
+		##linear_velocity=newVelocity+externalimpulse
+		#pass
 	pass
 
 
