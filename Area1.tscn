@@ -9,6 +9,7 @@ friction = 0.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_g8t0w"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_44ttl"]
+[gd_scene format=3 uid="uid://d3dq2k6ow7jmh"]
 
 [node name="Node3D" type="Node3D"]
 
