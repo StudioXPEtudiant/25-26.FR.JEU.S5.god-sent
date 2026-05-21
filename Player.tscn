@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cipod3k0xe5ym"]
+[gd_scene load_steps=2 format=3 uid="uid://cipod3k0xe5ym"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0rwas"]
 
 [node name="Node3D" type="Node3D"]
 
