@@ -1,4 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://cipod3k0xe5ym"]
+[gd_scene load_steps=2 format=3 uid="uid://cipod3k0xe5ym"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0rwas"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_0rwas")
+[gd_scene load_steps=7 format=3 uid="uid://cipod3k0xe5ym"]
 
 [ext_resource type="Script" path="res://Movement_script.gd" id="1_5wn8o"]
 [ext_resource type="Script" path="res://attack.gd" id="2_f0jt5"]
@@ -49,3 +57,6 @@ shape = SubResource("BoxShape3D_dewkq")
 [connection signal="bald" from="Area3D" to="Area3D/CollisionShape3D" method="set_disabled" binds= [false]]
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="timeout" from="Area3D/Timer" to="Area3D/CollisionShape3D" method="set_disabled" binds= [true]]
+[connection signal="bald" from="RigidBody3D/Area3D" to="RigidBody3D/Area3D/Timer" method="start"]
+[connection signal="bald" from="RigidBody3D/Area3D" to="RigidBody3D/Area3D/CollisionShape3D" method="set_disabled" binds= [true]]
+[connection signal="timeout" from="RigidBody3D/Area3D/Timer" to="RigidBody3D/Area3D/CollisionShape3D" method="set_disabled" binds= [false]]
