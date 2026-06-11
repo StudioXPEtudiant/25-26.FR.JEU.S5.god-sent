@@ -1,8 +1,11 @@
 extends Area3D
-var weaponsize = Vector3(10,10,10)
+@export var weaponsize = Vector3(10,10,10)
+@export var weaponDamage= int(10)
 signal bald
+@export var AttackType= ("Fire")
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print_debug(AttackType)
 	self.scale= weaponsize
 	pass # Replace with function body.
 
@@ -10,19 +13,18 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed("attack") :
-		print_debug("verticalAxe")
+		
 		bald.emit()
 		
 	pass
 
 
-func attack():
-	
-	
-		
-	pass
-pass
 
-func bodyEntered(CharacterBody3D):
+func _on_body_entered(body: CharacterBody3D):
 	
-	pass
+	var hp = body.find_child("HP")
+	
+	if hp :
+		hp.call("hurt",weaponDamage, AttackType)
+		print_debug("Tried damaging the bad guy")
+	pass # Replace with function body.

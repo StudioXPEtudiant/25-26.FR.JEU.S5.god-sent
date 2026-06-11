@@ -8,13 +8,13 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var moveSpeed: float=25
+	var moveSpeed: float=19
 	var left ="left"
 	var right = "right"
 	var up = "move up"
 	var down = "down"
-	var verticalAxe=Input.get_axis(down,up)
-	var horizontalAxe=Input.get_axis(right,left)
+	var verticalAxe=Input.get_axis(up,down)
+	var horizontalAxe=Input.get_axis(left,right)
 	var orientationChanged: bool=false
 	var newVelocity = get_linear_velocity()
 	#print_debug(horizontalAxe)
@@ -23,8 +23,12 @@ func _process(delta):
 	#print_debug(self.global_position)
 	var direction=Vector3(horizontalAxe,0,verticalAxe).normalized()
 	linear_velocity+=moveSpeed*direction*delta
+	
+	
 	if verticalAxe==0 and horizontalAxe==0 :
-		linear_velocity=linear_velocity*0.95
+		linear_velocity=linear_velocity*0.90
+		
+	
 	
 		
 	#if orientationChanged  :

@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3dq2k6ow7jmh"]
+[gd_scene load_steps=7 format=3 uid="uid://d3dq2k6ow7jmh"]
 
 [ext_resource type="PackedScene" uid="uid://cipod3k0xe5ym" path="res://Player.tscn" id="1_64ehj"]
+[ext_resource type="PackedScene" uid="uid://cmrb6lgtptwmh" path="res://enemie.tscn" id="2_nnmyo"]
+[ext_resource type="PackedScene" uid="uid://xm6c5671phf4" path="res://FireWeapon.tscn" id="3_cbpdc"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5rags"]
 friction = 0.0
@@ -26,7 +28,13 @@ mesh = SubResource("BoxMesh_44ttl")
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 3.94701, 22.9262, 35.5869)
 
 [node name="player" parent="." instance=ExtResource("1_64ehj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2.23953, 14.3585)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.88844, 14.3585)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.73392, 0.679236, 0, -0.679236, -0.73392, 0, 30.7175, 0)
+
+[node name="Node3D" parent="." instance=ExtResource("2_nnmyo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 15)
+
+[node name="Node3D2" parent="." instance=ExtResource("3_cbpdc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2062, 0.5, 5.31423)

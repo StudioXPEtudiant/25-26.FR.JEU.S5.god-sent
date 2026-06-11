@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://xm6c5671phf4"]
+
+[ext_resource type="Script" path="res://WeaponScript1.gd" id="1_85qyv"]
+[ext_resource type="Script" path="res://ItemPickUp.gd" id="1_vph2v"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_upwye"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_08rf5"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_uujyd"]
+material = SubResource("StandardMaterial3D_08rf5")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1niha"]
+
+[node name="FireWeapon" type="RigidBody3D"]
+script = ExtResource("1_vph2v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_upwye")
+
+[node name="Shape" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("CylinderMesh_uujyd")
+
+[node name="Area3D" type="Area3D" parent="CollisionShape3D/Shape"]
+collision_mask = 128
+script = ExtResource("1_85qyv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionShape3D/Shape/Area3D"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+shape = SubResource("BoxShape3D_1niha")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="CollisionShape3D/Shape/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="CollisionShape3D/Shape/Area3D" to="CollisionShape3D/Shape/Area3D" method="_on_body_entered"]

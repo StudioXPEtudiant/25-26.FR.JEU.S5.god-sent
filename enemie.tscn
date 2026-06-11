@@ -1,3 +1,31 @@
-[gd_scene format=3 uid="uid://cmrb6lgtptwmh"]
+[gd_scene load_steps=6 format=3 uid="uid://cmrb6lgtptwmh"]
 
-[node name="Node3D" type="Node3D"]
+[ext_resource type="Script" path="res://EnemieHP.gd" id="1_asxtf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6lm4y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ed618"]
+albedo_color = Color(0, 0.137255, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o1cbk"]
+material = SubResource("StandardMaterial3D_ed618")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rt3jl"]
+
+[node name="Node3D" type="CharacterBody3D"]
+collision_layer = 2
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_6lm4y")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D/CollisionShape3D"]
+mesh = SubResource("BoxMesh_o1cbk")
+
+[node name="HP" type="Node3D" parent="."]
+script = ExtResource("1_asxtf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_rt3jl")
