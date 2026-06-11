@@ -1,3 +1,32 @@
-[gd_scene format=3 uid="uid://g0dli74i45cw"]
+[gd_scene load_steps=8 format=3 uid="uid://g0dli74i45cw"]
 
-[node name="Player" type="Node3D"]
+[ext_resource type="Script" path="res://Movement_script.gd" id="1_y8g3p"]
+[ext_resource type="Script" path="res://attack.gd" id="2_674rt"]
+[ext_resource type="Script" path="res://InvScript.gd" id="3_te5sd"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7ytad"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_f7pl2"]
+
+[sub_resource type="Skin" id="Skin_ti2sb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fadh1"]
+
+[node name="Player" type="RigidBody3D"]
+script = ExtResource("1_y8g3p")
+
+[node name="Area3D2" type="Area3D" parent="."]
+script = ExtResource("2_674rt")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D2"]
+shape = SubResource("CylinderShape3D_7ytad")
+
+[node name="Inventory" type="Node" parent="."]
+script = ExtResource("3_te5sd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_f7pl2")
+skin = SubResource("Skin_ti2sb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_fadh1")
