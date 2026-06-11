@@ -12,7 +12,7 @@ material = SubResource("StandardMaterial3D_ed618")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rt3jl"]
 
-[node name="Node3D" type="CharacterBody3D"]
+[node name="Node3D2" type="CharacterBody3D"]
 collision_layer = 2
 
 [node name="Area3D" type="Area3D" parent="."]
