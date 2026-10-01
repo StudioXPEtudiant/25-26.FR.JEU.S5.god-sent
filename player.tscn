@@ -1,4 +1,4 @@
-[gd_scene load_steps=0 format=3 uid="uid://g0dli74i45cw"]
+[gd_scene load_steps=8 format=3 uid="uid://g0dli74i45cw"]
 
 [ext_resource type="Script" path="res://Movement_script.gd" id="1_y8g3p"]
 [ext_resource type="Script" path="res://attack.gd" id="2_674rt"]
