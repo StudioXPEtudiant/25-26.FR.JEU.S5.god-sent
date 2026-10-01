@@ -7,6 +7,7 @@ signal bald
 func _ready():
 	print_debug(AttackType)
 	self.scale= weaponsize
+	print_debug(self.scale)
 	pass # Replace with function body.
 
 
@@ -21,7 +22,7 @@ func _process(delta):
 
 
 func _on_body_entered(body: CharacterBody3D):
-	
+	print_debug("f")
 	var hp = body.find_child("HP")
 	
 	if hp :
