@@ -19,10 +19,11 @@ func _process(delta):
 	var newVelocity = get_linear_velocity()
 	#print_debug(horizontalAxe)
 	#print_debug(verticalAxe)
-	#print_debug(linear_velocity)
+	print_debug(linear_velocity)
 	#print_debug(self.global_position)
 	var direction=Vector3(horizontalAxe,0,verticalAxe).normalized()
 	linear_velocity+=moveSpeed*direction*delta
+	
 	
 	
 	if verticalAxe==0 and horizontalAxe==0 :
