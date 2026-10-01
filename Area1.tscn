@@ -1,4 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://xxnpw2u1r5uh"]
+[gd_scene load_steps=5 format=3 uid="uid://xxnpw2u1r5uh"]
+
+[ext_resource type="PackedScene" uid="uid://g0dli74i45cw" path="res://player.tscn" id="1_junvb"]
+[ext_resource type="PackedScene" uid="uid://cmrb6lgtptwmh" path="res://enemie.tscn" id="2_3xr2b"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_2ac6n"]
 
@@ -13,5 +16,17 @@ mesh = SubResource("BoxMesh_2ac6n")
 [node name="Area3D" type="Area3D" parent="MeshInstance3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area3D"]
-transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_nujgi")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.0113095, 0.999936, 0, -0.999936, -0.0113095, 0, 5.10764, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.508711, 0.860937, 0, -0.860937, 0.508711, 0, 6.56333, 0)
+
+[node name="Player" parent="." instance=ExtResource("1_junvb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.961733, 1.18422, 2.72046)
+
+[node name="Node3D2" parent="." instance=ExtResource("2_3xr2b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95767, 1.19075, -0.184197)

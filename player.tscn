@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://g0dli74i45cw"]
+[gd_scene load_steps=10 format=3 uid="uid://g0dli74i45cw"]
 
 [ext_resource type="Script" path="res://Movement_script.gd" id="1_y8g3p"]
 [ext_resource type="Script" path="res://attack.gd" id="2_674rt"]
@@ -6,11 +6,18 @@
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_7ytad"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_fadh1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g3s2s"]
+albedo_color = Color(0.333333, 1, 1, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_f7pl2"]
+lightmap_size_hint = Vector2i(14, 21)
+material = SubResource("StandardMaterial3D_g3s2s")
 
 [sub_resource type="Skin" id="Skin_ti2sb"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_fadh1"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_j3bsp"]
 
 [node name="Player" type="RigidBody3D"]
 script = ExtResource("1_y8g3p")
@@ -24,9 +31,15 @@ shape = SubResource("CylinderShape3D_7ytad")
 [node name="Inventory" type="Node" parent="."]
 script = ExtResource("3_te5sd")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_fadh1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D/CollisionShape3D"]
 mesh = SubResource("BoxMesh_f7pl2")
 skin = SubResource("Skin_ti2sb")
+skeleton = NodePath("../../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_fadh1")
+shape = SubResource("BoxShape3D_j3bsp")
