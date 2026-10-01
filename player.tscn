@@ -23,6 +23,7 @@ material = SubResource("StandardMaterial3D_g3s2s")
 script = ExtResource("1_y8g3p")
 
 [node name="Area3D2" type="Area3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 4, 0, 0, 0)
 script = ExtResource("2_674rt")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D2"]
