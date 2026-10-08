@@ -26,5 +26,5 @@ func _on_body_entered(body):
 	print_debug(inv)
 	if body.has_node("Inventory"):
 		print_debug("Calling")
-		body.call("add_Item","BALD",1)
+		inv.call("add_Items","BALD",1)
 	pass # Replace with function body.
