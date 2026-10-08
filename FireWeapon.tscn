@@ -23,7 +23,6 @@ shape = SubResource("CylinderShape3D_upwye")
 mesh = SubResource("CylinderMesh_uujyd")
 
 [node name="Area3D" type="Area3D" parent="CollisionShape3D/Shape"]
-collision_mask = 128
 script = ExtResource("1_85qyv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionShape3D/Shape/Area3D"]
@@ -31,5 +30,4 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 shape = SubResource("BoxShape3D_1niha")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_entered" from="CollisionShape3D/Shape/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="CollisionShape3D/Shape/Area3D" to="CollisionShape3D/Shape/Area3D" method="_on_body_entered"]

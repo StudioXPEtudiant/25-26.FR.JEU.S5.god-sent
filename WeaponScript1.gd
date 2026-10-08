@@ -17,13 +17,14 @@ extends Area3D
 #
 #
 #
-#func _on_body_entered(body : RigidBody3D):
-	#
-	#var IsPlayer=body.find_child("A")
-	#
-	#if IsPlayer :
-		#self. reparent(body)
-		#
-		#
-		#
-	#pass # Replace with function body.
+
+
+
+func _on_body_entered(body):
+	print("f")
+	var inv= body.find_child("Inventory")
+	print_debug(inv)
+	if body.has_node("Inventory"):
+		print_debug("Calling")
+		body.call("add_Item","BALD",1)
+	pass # Replace with function body.
