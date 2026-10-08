@@ -8,7 +8,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var moveSpeed: float=19
+	var moveSpeed: float=15
 	var left ="left"
 	var right = "right"
 	var up = "move up"
@@ -27,7 +27,7 @@ func _process(delta):
 	
 	
 	if verticalAxe==0 and horizontalAxe==0 :
-		linear_velocity=linear_velocity*0.90
+		linear_velocity=linear_velocity*0.95
 		
 	
 	

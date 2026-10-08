@@ -20,6 +20,7 @@ material = SubResource("StandardMaterial3D_g3s2s")
 [sub_resource type="BoxShape3D" id="BoxShape3D_j3bsp"]
 
 [node name="Player" type="RigidBody3D"]
+mass = 38.6
 script = ExtResource("1_y8g3p")
 
 [node name="Area3D2" type="Area3D" parent="."]
