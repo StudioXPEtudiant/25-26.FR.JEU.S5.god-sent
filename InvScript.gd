@@ -6,7 +6,8 @@ class_name Inventory
 signal itemAdded()
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	var dmg
+	var weaponsize
 	pass # Replace with function body.
 
 
@@ -22,5 +23,11 @@ func add_Items(itemName:String,ItemCount : int):
 	
 	pass
 func f(itemName:String, ItemCount:int) :
-	if inv.has( itemName) :
-		return("YES")
+	if inv.has(itemName) :
+		if itemName=="Mimicry":
+			var dmg=20
+			var weaponsize=20
+			print_debug("Returning Mimicry with 20,20")
+			return[dmg,weaponsize]
+		else:
+			print_debug("error")
