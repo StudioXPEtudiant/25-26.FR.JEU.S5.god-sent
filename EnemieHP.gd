@@ -17,7 +17,7 @@ func hurt(damageTaken: int, AttackType : String):
 	if AttackType=="Fire" :
 		print_debug("Enemy was attacked")
 		health=health-damageTaken*1.5
-		print_debug(health)
+		print_debug("i am at:",health)
 		print_debug("attack was :",AttackType)
 		pass
 	else :
