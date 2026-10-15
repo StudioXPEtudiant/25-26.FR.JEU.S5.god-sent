@@ -36,7 +36,3 @@ func _process(delta):
 		##linear_velocity=newVelocity+externalimpulse
 		#pass
 	pass
-
-
-
-
