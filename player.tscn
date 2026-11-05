@@ -59,8 +59,82 @@ shape = SubResource("BoxShape3D_j3bsp")
 [node name="Node2D" type="Node2D" parent="." unique_id=1510148976]
 
 [node name="Label" type="Label" parent="Node2D" unique_id=1884514416]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 181.0
+offset_bottom = 25.0
+text = "fffffffffffffffffffffffffffffff"
+script = ExtResource("4_hqtel")
+
+[node name="Label2" type="Label" parent="Node2D" unique_id=770308380]
+offset_left = 197.0
+offset_top = 60.0
+offset_right = 377.0
+offset_bottom = 83.0
+text = "fffffffffffffffffffffffffffffff"
+script = ExtResource("4_hqtel")
+
+[node name="Label3" type="Label" parent="Node2D" unique_id=1101091694]
+offset_left = -1.0
+offset_top = 55.0
+offset_right = 179.0
+offset_bottom = 78.0
+text = "fffffffffffffffffffffffffffffff"
+script = ExtResource("4_hqtel")
+
+[node name="Label4" type="Label" parent="Node2D" unique_id=118874678]
+offset_left = 577.0
+offset_top = 32.0
+offset_right = 757.0
+offset_bottom = 55.0
+text = "fffffffffffffffffffffffffffffff"
+script = ExtResource("4_hqtel")
+
+[node name="Label5" type="Label" parent="Node2D" unique_id=958092718]
+offset_left = 388.0
+offset_top = 30.0
+offset_right = 568.0
+offset_bottom = 53.0
+text = "fffffffffffffffffffffffffffffff"
+script = ExtResource("4_hqtel")
+
+[node name="Label6" type="Label" parent="Node2D" unique_id=465361768]
+offset_left = 198.0
+offset_top = 29.0
+offset_right = 378.0
+offset_bottom = 52.0
+text = "fffffffffffffffffffffffffffffff"
+script = ExtResource("4_hqtel")
+
+[node name="Label7" type="Label" parent="Node2D" unique_id=1350340012]
+offset_left = -3.0
+offset_top = 28.0
+offset_right = 177.0
+offset_bottom = 51.0
+text = "fffffffffffffffffffffffffffffff"
+script = ExtResource("4_hqtel")
+
+[node name="Label8" type="Label" parent="Node2D" unique_id=915522344]
+offset_left = 576.0
+offset_top = 3.0
+offset_right = 756.0
+offset_bottom = 26.0
+text = "fffffffffffffffffffffffffffffff"
+script = ExtResource("4_hqtel")
+
+[node name="Label9" type="Label" parent="Node2D" unique_id=1367051109]
+offset_left = 382.0
+offset_top = 2.0
+offset_right = 562.0
+offset_bottom = 25.0
+text = "fffffffffffffffffffffffffffffff"
+script = ExtResource("4_hqtel")
+
+[node name="Label10" type="Label" parent="Node2D" unique_id=1092411888]
+offset_left = 191.0
+offset_top = 2.0
+offset_right = 371.0
+offset_bottom = 25.0
 text = "fffffffffffffffffffffffffffffff"
 script = ExtResource("4_hqtel")
 
@@ -68,4 +142,4 @@ script = ExtResource("4_hqtel")
 [connection signal="bald" from="Area3D2" to="Area3D2/CollisionShape3D2" method="set_disabled" binds= [false]]
 [connection signal="body_entered" from="Area3D2" to="Area3D2" method="_on_body_entered"]
 [connection signal="timeout" from="Area3D2/CollisionShape3D2/Timer" to="Area3D2/CollisionShape3D2" method="set_disabled" binds= [true]]
-[connection signal="itemAdded" from="Inventory" to="Node2D/Label" method="edittext"]
+[connection signal="itemAdded" from="Inventory" to="Node2D/Label" method="edit_text"]
