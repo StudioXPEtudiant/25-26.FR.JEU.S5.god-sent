@@ -22,13 +22,13 @@ func _process(delta):
 	if Input.is_action_just_pressed("attack") :
 		
 		bald.emit()
-	if Input.is_action_just_pressed("switch"):
-		var result=inv.f("Mimicry",1)
-		print_debug(result[0],result[1])
-		
-		weaponDamage=result[0]
-		print_debug("weapon damage is",weaponDamage)
-		print_debug("switching...")
+	#if Input.is_action_just_pressed("switch"):
+		#var result=inv.f("Mimicry",1)
+		#print_debug(result[0],result[1])
+		#
+		#weaponDamage=result[0]
+		#print_debug("weapon damage is",weaponDamage)
+		#print_debug("switching...")
 	pass
 
 

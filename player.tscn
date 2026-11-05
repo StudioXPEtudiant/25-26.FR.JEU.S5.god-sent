@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://coc7r0jf1wjar" path="res://attack.gd" id="2_674rt"]
 [ext_resource type="Script" uid="uid://blwhm0pmhuig2" path="res://InvScript.gd" id="3_te5sd"]
 [ext_resource type="Script" uid="uid://btfye0ppios5k" path="res://UiScript1.gd" id="4_hqtel"]
+[ext_resource type="Script" uid="uid://be8mu7s1kagei" path="res://button.gd" id="5_sweqy"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_i3pqv"]
 friction = 0.0
@@ -65,6 +66,14 @@ offset_right = 181.0
 offset_bottom = 25.0
 text = "fffffffffffffffffffffffffffffff"
 script = ExtResource("4_hqtel")
+
+[node name="Button" type="Button" parent="Node2D/Label" unique_id=1763044649]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 182.0
+offset_bottom = 21.0
+script = ExtResource("5_sweqy")
 
 [node name="Label2" type="Label" parent="Node2D" unique_id=770308380]
 offset_left = 197.0
@@ -143,3 +152,4 @@ script = ExtResource("4_hqtel")
 [connection signal="body_entered" from="Area3D2" to="Area3D2" method="_on_body_entered"]
 [connection signal="timeout" from="Area3D2/CollisionShape3D2/Timer" to="Area3D2/CollisionShape3D2" method="set_disabled" binds= [true]]
 [connection signal="itemAdded" from="Inventory" to="Node2D/Label" method="edit_text"]
+[connection signal="pressed" from="Node2D/Label/Button" to="Node2D/Label/Button" method="switch"]
