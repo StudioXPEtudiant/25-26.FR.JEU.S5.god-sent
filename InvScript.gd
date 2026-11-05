@@ -20,6 +20,8 @@ func add_Items(itemName:String,ItemCount : int):
 	itemAdded.emit()
 	inv[itemName]=actualCount
 	print_debug(actualCount,itemName,ItemCount)
+	var ui=get_node("../Ui")
+	print_debug(ui)
 	
 	pass
 func f(itemName:String, ItemCount:int) :

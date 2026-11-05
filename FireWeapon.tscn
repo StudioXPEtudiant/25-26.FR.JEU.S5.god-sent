@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://xm6c5671phf4"]
+[gd_scene format=3 uid="uid://xm6c5671phf4"]
 
-[ext_resource type="Script" path="res://WeaponScript1.gd" id="1_85qyv"]
-[ext_resource type="Script" path="res://ItemPickUp.gd" id="1_vph2v"]
+[ext_resource type="Script" uid="uid://c02rknsvjtc0s" path="res://WeaponScript1.gd" id="1_85qyv"]
+[ext_resource type="Script" uid="uid://dfb081pyo0pli" path="res://ItemPickUp.gd" id="1_vph2v"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_upwye"]
 
@@ -13,19 +13,19 @@ material = SubResource("StandardMaterial3D_08rf5")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1niha"]
 
-[node name="FireWeapon" type="RigidBody3D"]
+[node name="FireWeapon" type="RigidBody3D" unique_id=403685386]
 script = ExtResource("1_vph2v")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=815952523]
 shape = SubResource("CylinderShape3D_upwye")
 
-[node name="Shape" type="MeshInstance3D" parent="CollisionShape3D"]
+[node name="Shape" type="MeshInstance3D" parent="CollisionShape3D" unique_id=108141549]
 mesh = SubResource("CylinderMesh_uujyd")
 
-[node name="Area3D" type="Area3D" parent="CollisionShape3D/Shape"]
+[node name="Area3D" type="Area3D" parent="CollisionShape3D/Shape" unique_id=1745179865]
 script = ExtResource("1_85qyv")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionShape3D/Shape/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionShape3D/Shape/Area3D" unique_id=632943900]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 shape = SubResource("BoxShape3D_1niha")
 

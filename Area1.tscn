@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://xxnpw2u1r5uh"]
+[gd_scene format=3 uid="uid://xxnpw2u1r5uh"]
 
 [ext_resource type="PackedScene" uid="uid://g0dli74i45cw" path="res://player.tscn" id="1_junvb"]
 [ext_resource type="PackedScene" uid="uid://cmrb6lgtptwmh" path="res://enemie.tscn" id="2_3xr2b"]
@@ -10,32 +10,32 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vpht6"]
 
-[node name="Node3D" type="StaticBody3D"]
+[node name="Node3D" type="StaticBody3D" unique_id=1448869711]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=389770659]
 transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
 mesh = SubResource("BoxMesh_2ac6n")
 
-[node name="Area3D" type="Area3D" parent="MeshInstance3D"]
+[node name="Area3D" type="Area3D" parent="MeshInstance3D" unique_id=850106731]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/Area3D" unique_id=1050900788]
 shape = SubResource("BoxShape3D_nujgi")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=394376157]
 transform = Transform3D(1, 0, 0, 0, -0.0113095, 0.999936, 0, -0.999936, -0.0113095, 0, 5.10764, 0)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1661264714]
 transform = Transform3D(1, 0, 0, 0, 0.508711, 0.860937, 0, -0.860937, 0.508711, 0, 6.56333, 0)
 
-[node name="Player" parent="." instance=ExtResource("1_junvb")]
+[node name="Player" parent="." unique_id=786569834 instance=ExtResource("1_junvb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.961733, 1.18422, 2.72046)
 
-[node name="Node3D2" parent="." instance=ExtResource("2_3xr2b")]
+[node name="Node3D2" parent="." unique_id=1155347540 instance=ExtResource("2_3xr2b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95767, 1.02999, -0.184197)
 
-[node name="FireWeapon" parent="." instance=ExtResource("3_l11es")]
+[node name="FireWeapon" parent="." unique_id=1239063062 instance=ExtResource("3_l11es")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.81457, 1.65504, 2.31862)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=167972558]
 transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
 shape = SubResource("BoxShape3D_vpht6")
