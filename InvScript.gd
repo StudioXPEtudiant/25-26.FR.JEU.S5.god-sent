@@ -17,7 +17,7 @@ func _process(delta):
 func add_Items(itemName:String,ItemCount : int):
 	var actualCount:int=inv.get(itemName,0)
 	actualCount+=ItemCount
-	itemAdded.emit()
+	itemAdded.emit(itemName)
 	inv[itemName]=actualCount
 	print_debug(actualCount,itemName,ItemCount)
 	var ui=get_node("../Ui")

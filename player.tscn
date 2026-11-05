@@ -61,6 +61,7 @@ shape = SubResource("BoxShape3D_j3bsp")
 [node name="Label" type="Label" parent="Node2D" unique_id=1884514416]
 offset_right = 40.0
 offset_bottom = 23.0
+text = "fffffffffffffffffffffffffffffff"
 script = ExtResource("4_hqtel")
 
 [connection signal="bald" from="Area3D2" to="Area3D2/CollisionShape3D2/Timer" method="start"]

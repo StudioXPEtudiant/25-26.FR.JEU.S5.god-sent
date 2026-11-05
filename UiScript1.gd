@@ -11,5 +11,6 @@ func _process(delta: float) -> void:
 	pass
 
 func edittext(a:String):
+	print_debug("text trying to be edited ")
 	self.text=a
 	pass
