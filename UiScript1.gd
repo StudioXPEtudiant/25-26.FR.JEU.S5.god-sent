@@ -13,7 +13,7 @@ extends Label
 @onready var Label12=get_node("../Label11")
 @onready var Label13=get_node("../Label12")
 @onready var Label14=get_node("../Label13")
-@onready var inventorySize=[Label1,Label2,Label3,Label4,Label5,Label6,Label7,Label8,Label9]
+@onready var inventorySize=[Label1,Label2,Label3,Label4,Label5,Label6,Label7,Label8,Label9,Label10]
 var isEmpty: bool
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
