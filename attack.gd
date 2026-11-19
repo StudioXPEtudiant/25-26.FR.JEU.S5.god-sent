@@ -46,7 +46,7 @@ func switch(a:String):
 func _on_body_entered(body: RigidBody3D):
 	#print_debug("f")
 	var hp = body.find_child("HP")
-	print_debug(hp,)
+	
 	if hp :
 		hp.call("hurt",weaponDamage, AttackType)
 		print_debug(weaponDamage)
