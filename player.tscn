@@ -64,10 +64,10 @@ offset_left = 1.0
 offset_top = 2.0
 offset_right = 181.0
 offset_bottom = 25.0
-text = "fffffffffffffffffffffffffffffff"
 script = ExtResource("4_hqtel")
 
 [node name="Button" type="Button" parent="Node2D/Label" unique_id=1763044649]
+visible = false
 layout_mode = 0
 offset_left = 3.0
 offset_top = 4.0

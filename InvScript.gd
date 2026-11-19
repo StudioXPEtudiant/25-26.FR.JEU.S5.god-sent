@@ -26,10 +26,10 @@ func add_Items(itemName:String,ItemCount : int):
 	pass
 func f(itemName:String, ItemCount:int) :
 	if inv.has(itemName) :
-		if itemName=="Mimicry":
+		if itemName=="Sword":
 			var dmg=20
 			var weaponsize=20
-			print_debug("Returning Mimicry with 20,20")
+			print_debug("Returning Sword with 20,20")
 			return[dmg,weaponsize]
 		else:
 			print_debug("error")
