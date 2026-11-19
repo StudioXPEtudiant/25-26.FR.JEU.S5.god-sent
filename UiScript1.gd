@@ -34,6 +34,8 @@ func edit_text(a:String):
 			element.text=a
 			print_debug(a,"...")
 			element.isEmpty=false
+			var slot=element.find_child("Button")
+			slot.call("fill",a)
 			break
 		else:
 			print_debug("aaaaaaaaaaaaaaaaaaaaaaaaaa")

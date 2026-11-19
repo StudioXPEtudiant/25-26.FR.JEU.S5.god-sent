@@ -67,7 +67,6 @@ offset_bottom = 25.0
 script = ExtResource("4_hqtel")
 
 [node name="Button" type="Button" parent="Node2D/Label" unique_id=1763044649]
-visible = false
 layout_mode = 0
 offset_left = 3.0
 offset_top = 4.0
@@ -83,6 +82,15 @@ offset_bottom = 83.0
 text = "fffffffffffffffffffffffffffffff"
 script = ExtResource("4_hqtel")
 
+[node name="Button" type="Button" parent="Node2D/Label2" unique_id=1355573344]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.044000003
+anchor_bottom = 0.17400001
+offset_right = 173.08
+offset_bottom = 15.997999
+script = ExtResource("5_sweqy")
+
 [node name="Label3" type="Label" parent="Node2D" unique_id=1101091694]
 offset_left = -1.0
 offset_top = 55.0
@@ -90,6 +98,13 @@ offset_right = 179.0
 offset_bottom = 78.0
 text = "fffffffffffffffffffffffffffffff"
 script = ExtResource("4_hqtel")
+
+[node name="Button" type="Button" parent="Node2D/Label3" unique_id=770263706]
+layout_mode = 0
+offset_top = 5.0
+offset_right = 180.0
+offset_bottom = 22.0
+script = ExtResource("5_sweqy")
 
 [node name="Label4" type="Label" parent="Node2D" unique_id=118874678]
 offset_left = 577.0
@@ -99,6 +114,14 @@ offset_bottom = 55.0
 text = "fffffffffffffffffffffffffffffff"
 script = ExtResource("4_hqtel")
 
+[node name="Button" type="Button" parent="Node2D/Label4" unique_id=178096821]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 6.0
+offset_right = 180.0
+offset_bottom = 19.0
+script = ExtResource("5_sweqy")
+
 [node name="Label5" type="Label" parent="Node2D" unique_id=958092718]
 offset_left = 388.0
 offset_top = 30.0
@@ -106,6 +129,14 @@ offset_right = 568.0
 offset_bottom = 53.0
 text = "fffffffffffffffffffffffffffffff"
 script = ExtResource("4_hqtel")
+
+[node name="Button" type="Button" parent="Node2D/Label5" unique_id=1971375976]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 3.0
+offset_right = 185.0
+offset_bottom = 23.0
+script = ExtResource("5_sweqy")
 
 [node name="Label6" type="Label" parent="Node2D" unique_id=465361768]
 offset_left = 198.0
@@ -115,6 +146,14 @@ offset_bottom = 52.0
 text = "fffffffffffffffffffffffffffffff"
 script = ExtResource("4_hqtel")
 
+[node name="Button" type="Button" parent="Node2D/Label6" unique_id=1883609564]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 184.0
+offset_bottom = 20.0
+script = ExtResource("5_sweqy")
+
 [node name="Label7" type="Label" parent="Node2D" unique_id=1350340012]
 offset_left = -3.0
 offset_top = 28.0
@@ -122,6 +161,14 @@ offset_right = 177.0
 offset_bottom = 51.0
 text = "fffffffffffffffffffffffffffffff"
 script = ExtResource("4_hqtel")
+
+[node name="Button" type="Button" parent="Node2D/Label7" unique_id=1980909459]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 2.0
+offset_right = 182.0
+offset_bottom = 22.0
+script = ExtResource("5_sweqy")
 
 [node name="Label8" type="Label" parent="Node2D" unique_id=915522344]
 offset_left = 576.0
@@ -131,6 +178,14 @@ offset_bottom = 26.0
 text = "fffffffffffffffffffffffffffffff"
 script = ExtResource("4_hqtel")
 
+[node name="Button" type="Button" parent="Node2D/Label8" unique_id=1490397381]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 186.0
+offset_bottom = 22.0
+script = ExtResource("5_sweqy")
+
 [node name="Label9" type="Label" parent="Node2D" unique_id=1367051109]
 offset_left = 382.0
 offset_top = 2.0
@@ -138,6 +193,19 @@ offset_right = 562.0
 offset_bottom = 25.0
 text = "fffffffffffffffffffffffffffffff"
 script = ExtResource("4_hqtel")
+
+[node name="Button" type="Button" parent="Node2D/Label9" unique_id=1168274204]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.317
+anchor_top = 9.378
+anchor_right = -0.317
+anchor_bottom = 9.378
+offset_left = -1382.94
+offset_top = 935.306
+offset_right = -1374.94
+offset_bottom = 943.306
+script = ExtResource("5_sweqy")
 
 [node name="Label10" type="Label" parent="Node2D" unique_id=1092411888]
 offset_left = 191.0
@@ -147,6 +215,17 @@ offset_bottom = 25.0
 text = "fffffffffffffffffffffffffffffff"
 script = ExtResource("4_hqtel")
 
+[node name="Button" type="Button" parent="Node2D/Label10" unique_id=2079379791]
+layout_mode = 0
+offset_left = -2689.0
+offset_top = 2302.0
+offset_right = -2681.0
+offset_bottom = 2310.0
+text = "
+
+"
+script = ExtResource("5_sweqy")
+
 [node name="CooldownTimer" type="Timer" parent="." unique_id=1922732432]
 
 [connection signal="bald" from="Area3D2" to="Area3D2/CollisionShape3D2/Timer" method="start"]
@@ -155,5 +234,6 @@ script = ExtResource("4_hqtel")
 [connection signal="cooldownStart" from="Area3D2" to="CooldownTimer" method="start" binds= [1.0]]
 [connection signal="timeout" from="Area3D2/CollisionShape3D2/Timer" to="Area3D2/CollisionShape3D2" method="set_disabled" binds= [true]]
 [connection signal="itemAdded" from="Inventory" to="Node2D/Label" method="edit_text"]
-[connection signal="pressed" from="Node2D/Label/Button" to="Node2D/Label/Button" method="switch"]
+[connection signal="pressed" from="Node2D/Label/Button" to="Node2D/Label/Button" method="_on_pressed"]
+[connection signal="switch" from="Node2D/Label/Button" to="Area3D2" method="switch"]
 [connection signal="timeout" from="CooldownTimer" to="Area3D2" method="update_cooldown"]

@@ -17,7 +17,7 @@ func _ready():
 
 func update_cooldown():
 	cooldown=0
-	print_debug("cooldown updatesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",cooldown)
+	print_debug("cooldown update",cooldown)
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -37,12 +37,16 @@ func _process(delta):
 		print_debug("switching...")
 	pass
 
-
+func switch(a:String):
+	print_debug(a,"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+	if a=="Sword":
+		weaponDamage=20
+	pass
 
 func _on_body_entered(body: RigidBody3D):
 	#print_debug("f")
 	var hp = body.find_child("HP")
-	print_debug(hp,"SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS")
+	print_debug(hp,)
 	if hp :
 		hp.call("hurt",weaponDamage, AttackType)
 		print_debug(weaponDamage)
