@@ -147,9 +147,13 @@ offset_bottom = 25.0
 text = "fffffffffffffffffffffffffffffff"
 script = ExtResource("4_hqtel")
 
+[node name="CooldownTimer" type="Timer" parent="." unique_id=1922732432]
+
 [connection signal="bald" from="Area3D2" to="Area3D2/CollisionShape3D2/Timer" method="start"]
 [connection signal="bald" from="Area3D2" to="Area3D2/CollisionShape3D2" method="set_disabled" binds= [false]]
 [connection signal="body_entered" from="Area3D2" to="Area3D2" method="_on_body_entered"]
+[connection signal="cooldownStart" from="Area3D2" to="CooldownTimer" method="start" binds= [1.0]]
 [connection signal="timeout" from="Area3D2/CollisionShape3D2/Timer" to="Area3D2/CollisionShape3D2" method="set_disabled" binds= [true]]
 [connection signal="itemAdded" from="Inventory" to="Node2D/Label" method="edit_text"]
 [connection signal="pressed" from="Node2D/Label/Button" to="Node2D/Label/Button" method="switch"]
+[connection signal="timeout" from="CooldownTimer" to="Area3D2" method="update_cooldown"]

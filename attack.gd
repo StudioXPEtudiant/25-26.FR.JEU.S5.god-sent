@@ -2,8 +2,10 @@ extends Area3D
 @export var weaponsize = Vector3(10,10,10)
 @export var weaponDamage= int(1)
 signal bald
+var cooldown = 0
 @export var AttackType= ("Fire")
 @onready var inv=get_node("../Inventory")
+signal cooldownStart
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print_debug(AttackType)
@@ -13,15 +15,19 @@ func _ready():
 	print_debug(inv,"50")
 	pass # Replace with function body.
 
-func update_weapon():
-	
+func update_cooldown():
+	cooldown=0
+	print_debug("cooldown updatesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",cooldown)
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	if Input.is_action_just_pressed("attack") :
+	if Input.is_action_just_pressed("attack") and cooldown==0:
 		
 		bald.emit()
+		cooldown=1
+		cooldownStart.emit()
+		
 	if Input.is_action_just_pressed("switch"):
 		var result=inv.f("Sword",1)
 		print_debug(result[0],result[1])
