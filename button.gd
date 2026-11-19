@@ -22,4 +22,5 @@ func fill(a:String):
 
 func _on_pressed() -> void:
 	switch.emit(whatami)
+	print_debug("ssssssssssssssssssssssssssssssssss",whatami)
 	pass # Replace with function body.
