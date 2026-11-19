@@ -33,10 +33,10 @@ func _process(delta):
 
 
 
-func _on_body_entered(body: CharacterBody3D):
+func _on_body_entered(body: RigidBody3D):
 	#print_debug("f")
 	var hp = body.find_child("HP")
-	
+	print_debug(hp,"SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS")
 	if hp :
 		hp.call("hurt",weaponDamage, AttackType)
 		print_debug(weaponDamage)
