@@ -15,6 +15,6 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 		# touner l'ennemi vers le joueur
-	if abs(direction.x)> 0.5||abs(direction.y)>0.5:
+	if abs(direction.x)>0.5||abs(direction.y)>0.5:
 		look_at(global_position + direction, Vector3.UP)
 		move_and_slide()

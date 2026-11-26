@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://g0dli74i45cw" path="res://player.tscn" id="1_junvb"]
 [ext_resource type="PackedScene" uid="uid://cmrb6lgtptwmh" path="res://enemie.tscn" id="2_3xr2b"]
 [ext_resource type="PackedScene" uid="uid://xm6c5671phf4" path="res://FireWeapon.tscn" id="3_l11es"]
-[ext_resource type="PackedScene" uid="uid://dy2jhn0x0suob" path="res://totem1.tscn" id="4_jltp2"]
+[ext_resource type="PackedScene" path="res://totem1.tscn" id="4_jltp2"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_2ac6n"]
 
@@ -39,8 +39,6 @@ shape = SubResource("BoxShape3D_vpht6")
 [node name="ennemie" parent="." unique_id=924802143 node_paths=PackedStringArray("player") instance=ExtResource("2_3xr2b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.685484, 1.0162, -1.0728151)
 player = NodePath("../Player")
-[node name="Node3D2" parent="." unique_id=924802143 instance=ExtResource("2_3xr2b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.149859, 1.0162, -0.89995265)
 
 [node name="Node3D" parent="." unique_id=97966957 instance=ExtResource("4_jltp2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9624281, 1.4172153, -3.0074263)
