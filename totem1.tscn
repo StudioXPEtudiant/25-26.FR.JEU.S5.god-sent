@@ -22,7 +22,7 @@ mesh = SubResource("BoxMesh_t0chc")
 
 [node name="Area3D" type="Area3D" parent="CollisionShape3D/MeshInstance3D" unique_id=542950950]
 script = ExtResource("1_wlvcd")
-ItemName = "Totem"
+ItemName = "totem1"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionShape3D/MeshInstance3D/Area3D" unique_id=177109877]
 transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, 0)

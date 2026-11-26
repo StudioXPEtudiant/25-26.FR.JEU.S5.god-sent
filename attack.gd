@@ -6,6 +6,7 @@ var cooldown = 0
 @export var AttackType= ("Fire")
 @onready var inv=get_node("../Inventory")
 signal cooldownStart
+var AttackBoost:int
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print_debug(AttackType)
@@ -42,12 +43,16 @@ func switch(a:String):
 	if a=="Sword":
 		weaponDamage=20
 	pass
-
-func _on_body_entered(body: RigidBody3D):
+func get_buff(a:String):
+	if a =="totem1":
+		print_debug("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF")
+		AttackBoost=15
+	pass
+func _on_body_entered(body: CharacterBody3D):
 	#print_debug("f")
 	var hp = body.find_child("HP")
 	
 	if hp :
-		hp.call("hurt",weaponDamage, AttackType)
+		hp.call("hurt",weaponDamage+AttackBoost, AttackType)
 		print_debug(weaponDamage)
 	pass # Replace with function body.
