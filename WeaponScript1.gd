@@ -1,4 +1,5 @@
 extends Area3D
+@export var ItemName:String
 #var test= self.find_children("Shape")
 #@export var weaponsize = Vector3(10,10,10)
 #@export var weaponDamage= int(10)
@@ -26,5 +27,5 @@ func _on_body_entered(body):
 	print_debug(inv)
 	if body.has_node("Inventory"):
 		print_debug("Calling")
-		inv.call("add_Items","Sword",1)
+		inv.call("add_Items",ItemName,1)
 	pass # Replace with function body.

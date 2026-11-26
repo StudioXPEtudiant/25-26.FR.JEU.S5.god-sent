@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dy2jhn0x0suob"]
+
+[ext_resource type="Script" uid="uid://c02rknsvjtc0s" path="res://WeaponScript1.gd" id="1_wlvcd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ixpwy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wlvcd"]
+albedo_color = Color(0.827451, 0.03137255, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_t0chc"]
+material = SubResource("StandardMaterial3D_wlvcd")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t0chc"]
+
+[node name="Node3D" type="RigidBody3D" unique_id=97966957]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1153323517]
+shape = SubResource("BoxShape3D_ixpwy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=1759327846]
+mesh = SubResource("BoxMesh_t0chc")
+
+[node name="Area3D" type="Area3D" parent="CollisionShape3D/MeshInstance3D" unique_id=542950950]
+script = ExtResource("1_wlvcd")
+ItemName = "Totem"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionShape3D/MeshInstance3D/Area3D" unique_id=177109877]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, 0)
+shape = SubResource("BoxShape3D_t0chc")

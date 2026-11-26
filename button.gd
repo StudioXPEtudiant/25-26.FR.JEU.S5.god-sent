@@ -1,6 +1,7 @@
 extends Button
 signal switch
 var whatami
+signal use
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#print_debug(inventory,"fffffffffffffffffffffffffffffffffffffffffb")
@@ -21,5 +22,9 @@ func fill(a:String):
 
 
 func _on_pressed() -> void:
-	switch.emit(whatami)
+	if whatami=="Sword":
+		switch.emit(whatami)
+	elif whatami=="totem1":
+		use.emit(whatami)
+	print_debug("ssssssssssssssssssssssssssssssssss",whatami)
 	pass # Replace with function body.

@@ -24,6 +24,7 @@ mesh = SubResource("CylinderMesh_uujyd")
 
 [node name="Area3D" type="Area3D" parent="CollisionShape3D/Shape" unique_id=1745179865]
 script = ExtResource("1_85qyv")
+ItemName = "Sword"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionShape3D/Shape/Area3D" unique_id=632943900]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
