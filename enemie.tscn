@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cmrb6lgtptwmh"]
 
 [ext_resource type="Script" uid="uid://csv3ktsue2l5y" path="res://EnemieHP.gd" id="1_asxtf"]
+[ext_resource type="Script" uid="uid://dfbq43ulw6y8g" path="res://enemie.gd" id="1_bs3ma"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6lm4y"]
 
@@ -12,8 +13,9 @@ material = SubResource("StandardMaterial3D_ed618")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rt3jl"]
 
-[node name="Node3D2" type="RigidBody3D" unique_id=924802143]
+[node name="ennemie" type="CharacterBody3D" unique_id=1892987336]
 collision_layer = 2
+script = ExtResource("1_bs3ma")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=679644297]
 collision_layer = 2
